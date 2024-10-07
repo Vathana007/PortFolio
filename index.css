@@ -248,22 +248,30 @@
     -webkit-text-fill-color: transparent;
     -moz-text-fill-color: transparent;
     margin-bottom: 30px;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: 0.1s;
 }
 
 .home_content h3 {
     font-size: 2rem;
     color: #6DD5FA;
     margin-bottom: 18px;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: 0.1s;
 }
 
 #textP {
     color: #333;
     font-size: 1.2em;
     margin-bottom: 12px;
+    animation: slideTop 1s ease forwards;
+    animation-delay: 0.1s;
 }
 
 .foot_logo {
     font-size: 2.5rem;
+    animation: slideRight 1s ease forwards;
+    animation-delay: 0.1s;
 }
 
 .foot_logo a {
@@ -288,6 +296,8 @@
     transition: all 0.3s ease;
     opacity: 1;
     cursor: pointer;
+    animation: slideRight 1s ease forwards;
+    animation-delay: 0.1s;
 }
 
 .btn:hover {
@@ -308,6 +318,8 @@
     justify-content: center;
     cursor: pointer;
     box-shadow: 0px 4px 4px 4px #cacaca;
+    animation: slideRight 1s ease forwards;
+    animation-delay: 0.1s;
 }
 
 .home_img_container img:hover {
@@ -393,7 +405,9 @@
     justify-content: center;
     cursor: pointer;
     box-shadow: 0px 4px 4px 4px #84d7f5;
-    transition: all 0.3s ease
+    transition: all 0.3s ease;
+    animation: slideRight 1s ease forwards;
+    animation-delay: 0.1s;
 }
 
 .about_img_container img:hover {
@@ -419,11 +433,15 @@
     font-size: 4rem;
     text-align: left;
     margin-bottom: 20px;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: 0.1s;
 }
 
 .about_content p {
     text-align: left;
     font-size: 1.2rem;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: 0.1s;
 }
 
 .about_btn {
@@ -439,6 +457,8 @@
     opacity: 1;
     cursor: pointer;
     transition: all 0.3s ease;
+    animation: slideTop 1s ease forwards;
+    animation-delay: 0.1s;
 }
 
 .about_btn:hover {
@@ -464,7 +484,7 @@
     visibility: hidden;
     opacity: 0;
     transition: all 0.3s ease;
-    z-index: 999;
+    z-index: 9999;
 }
 
 .modal_content {
@@ -598,6 +618,7 @@
 .skills_container h1 {
     text-align: center;
     font-size: 3rem;
+    background: #7F7FD5;
     background: -webkit-linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5);
     background: linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5);
     background-size: 100%;
@@ -606,6 +627,8 @@
     -webkit-text-fill-color: transparent;
     -moz-text-fill-color: transparent;
     margin-bottom: 2rem;
+    animation: slideTop 1s ease forwards;
+    animation-delay: 0.1s;
 }
 
 .card__container {
@@ -615,6 +638,7 @@
     max-width: 1300px;
     gap: 2rem;
     padding: 0 50px;
+
 }
 
 .card__article {
@@ -623,6 +647,9 @@
     width: 100%;
     text-align: center;
     margin-top: 3rem;
+    transition: all 0.3s ease;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: 0.1s;
 }
 
 .card__img {
@@ -635,6 +662,7 @@
 
 .card__article:hover .card__img {
     transform: scale(1.05);
+    box-shadow: 0px 4px 4px hsl(0, 0%, 80%)
 }
 
 .card__data {
@@ -709,3 +737,226 @@
 }
 
 /* PortFolio Section */
+.portfolio {
+    background-color: #e8f6fb;
+    padding: 5rem;
+}
+
+.portfolio h1 {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 50px;
+    background: #7F7FD5;
+    background: -webkit-linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5);
+    background: linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    animation: slideBottom 1s ease forwards;
+    animation-delay: 0.1s;
+}
+
+.portfolio_container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 100%;
+    max-width: 1300px;
+    gap: 2rem;
+    padding: 0 50px;
+}
+
+.portfolio_content {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    text-align: center;
+    margin-top: 3rem;
+    animation: slideRight 1s ease forwards;
+    animation-delay: 0.1s;
+}
+
+.portfolio_content img {
+    width: 280px;
+    height: 300px;
+    border-radius: 6px;
+    transition: transform 0.3s ease;
+    box-shadow: 0px 4px 4px hsl(0, 0%, 80%);
+}
+
+.portfolio_content:hover img {
+    transform: scale(1.05);
+    box-shadow: 0px 4px 4px hsl(0, 0%, 80%);
+}
+
+.card_portfolio_info {
+    width: 295px;
+    height: 305px;
+    background-color: #2a9cc6;
+    padding: 1.5rem;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: -4rem;
+    margin-inline: auto;
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.portfolio_content:hover .card_portfolio_info {
+    border-radius: 10px;
+    opacity: 1;
+    transform: translateX(-2rem);
+}
+
+.card_portfolio_title {
+    font-size: 2rem;
+    font-weight: 500;
+    margin-top: 10px;
+    background: #B2FEFA;
+    background: -webkit-linear-gradient(to right, #0ED2F7, #B2FEFA);
+    background: linear-gradient(to right, #0ED2F7, #B2FEFA);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+}
+
+.card_portfolio_info p {
+    margin-top: 60px;
+    color: #f8f8f8;
+    font-size: 1.1rem;
+}
+
+.btn_portfolio {
+    margin: 20px;
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: none;
+    font-weight: bold;
+    box-shadow: 4px 4px 4px hsl(0, 1%, 80%);
+    transition: all 0.3s ease;
+}
+
+.btn_portfolio:hover {
+    background-color: transparent;
+    border: 1px solid hsl(0, 1%, 80%);
+    color: #ffffff;
+    box-shadow: 6px 6px 6px hsl(0, 1%, 80%);
+    transition: all 0.3s ease;
+}
+
+@media (max-width: 1024px) {
+    .portfolio_container {
+        grid-template-columns: repeat(3, 1fr);
+        padding: 0 30px;
+    }
+
+    .portfolio_content img {
+        width: 260px;
+        height: 280px;
+    }
+
+    .card_portfolio_info {
+        width: 270px;
+        height: 280px;
+    }
+
+    .portfolio h1 {
+        font-size: 2.5rem;
+    }
+
+    .card_portfolio_title {
+        font-size: 1.5rem;
+    }
+
+    .card_portfolio_info p {
+        font-size: 1rem;
+        margin-top: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .portfolio_container {
+        grid-template-columns: 1fr;
+        padding: 0 20px;
+    }
+
+    .portfolio_content {
+        margin-top: 2rem;
+    }
+
+    .portfolio_content img {
+        width: 135px;
+        height: 140px;
+    }
+
+    .card_portfolio_info {
+        width: auto;
+        height: auto;
+        padding: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem; 
+        text-align: center;
+        overflow: hidden; 
+    }
+
+    .portfolio h1 {
+        font-size: 2rem;
+    }
+
+    .card_portfolio_title {
+        font-size: 1rem;
+        margin-top: 10px; 
+    }
+
+    .card_portfolio_info p {
+        margin-top: 10px;
+        font-size: 0.6rem;
+        line-height: 1.1rem;
+    }
+
+    .btn_portfolio {
+        font-weight: normal;
+        padding: 5px 10px; 
+        font-size: 0.8rem; 
+        margin: 10px 0 0; 
+    }
+}
+
+/* Footer Section */
+footer {
+    background-color: #188cb7;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer .foot_name {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+footer .footer-icon a {
+    font-size: 2em;
+    color: #ffffff;
+    padding: 5px;
+}
+
+@media (max-width: 768px) {
+
+    footer .foot_name {
+        font-size: 1em;
+    }
+
+    footer .footer-icon a {
+        font-size: 1.5em;
+    }
+}
